@@ -16,7 +16,7 @@ You can grab Clarifai API key [here](https://www.clarifai.com/)
 
 # Database
 
-1. Install postgres
+1. Install postgreSQL
 2. create a new database in postgres named smart_brain. you can name your own. Make sure to change database configs in server.js accordingly.
 3. create following tables in the smart_brain database: 
     1. create table users(id SERIAL PRIMARY KEY, name VARCHAR(100), email TEXT UNIQUE NOT NULL, entries BIGINT DEFAULT 0, joined TIMESTAMP NOT NULL);
