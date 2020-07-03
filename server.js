@@ -10,13 +10,14 @@ const profile = require('./controllers/profile');
 const image = require('./controllers/image');
 
 // database connection
+    // note: while deploying on web we would use environmental variables instead of manually entering the database details to ensure security. 
 const db = knex({
     client: 'pg',
     connection: {
-        connectionString: process.env.DATABASE_URL,
-        ssl: {
-            rejectUnauthorized: false
-        }
+        host: '127.0.0.1',
+        user: 'postgres',       // if your user name is not 'postgres', change it to your postgres username
+        password: 'test',       // enter your postgres password
+        database: 'smart_brain' // your database name
     }
 });
 
@@ -29,8 +30,8 @@ app.use(express.urlencoded({ extended: false }));
 app.use(cors());
 
 // listening
-app.listen(process.env.PORT, () => {
-    console.log(`app running on port ${process.env.PORT}`);
+app.listen(3000, () => {
+    console.log("app running on port 3000");
 });
 
 // root
