@@ -9,7 +9,7 @@ You can grab Clarifai API key [here](https://www.clarifai.com/)
 
 # Important
 
-** This repo is the backend(Node) part of face-detection project. Check `Face-Detection-Smart-Brain` for frontend(React) part.
+** This repo is the backend(Node) part of face-detection project. Check `Face-Detection-Smart-Brain` repository for frontend(React) part.
 
 1. The database used in this project is `postgreSQL`
 2. Check database section below to setup database for the project.
